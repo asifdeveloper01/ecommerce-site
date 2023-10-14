@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <title>Frontend Mentor | Manage landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .nav-item {
+      font-size: 20px;
+      color: hsl(228, 39%, 23%);
+      padding: 10px;
+
+    }
+
+    .nav-item a {
+      color: hsl(228, 39%, 23%);
+    }
+
+    .img1 {
+      padding: 15px 0px 10px 30px;
+    }
+
+    .nav-link {
+      color: hsl(228, 39%, 23%);
+    }
+
+    nav {
+      background-image: url("images/bg-simplify-section-desktop.svg");
+    }
+
+    #btn1 {
+      margin: 10px 40px 10px 0px;
+      background-color: hsl(12, 88%, 59%);
+      padding: 10px 20px 10px 20px;
+      border-radius: 50px;
+      color: white;
+      border: 1px solid hsl(12, 88%, 59%);
+    }
+
+    #btn3 {
+      background-color: hsl(12, 88%, 59%);
+      padding: 10px 20px 10px 20px;
+      border-radius: 50px;
+      color: white;
+      text-align: center;
+      margin-left: 550px;
+      margin-top: 100px;
+      border: 1px solid hsl(12, 88%, 59%);
+    }
+
+    #btn1:hover {
+      color: hsl(12, 88%, 59%);
+      background-color: white;
+      border: 1px solid hsl(12, 88%, 59%);
+    }
+
+    #main1 {
+      padding-top: 100px;
+      background-image: url("images/bg-tablet-pattern.svg");
+    }
+
+    .hea1 {
+      font-size: 42px;
+      font-weight: 600;
+      text-align: justify;
+      letter-spacing: 2px;
+
+    }
+
+    #main2 {
+      margin-top: 150px;
+    }
+
+    .btn2 {
+      background-color: hsl(12, 88%, 59%);
+      padding: 5px 10px;
+      border-radius: 30px;
+      color: white;
+      border: 1px solid hsl(12, 88%, 59%);
+
+    }
+
+    .btn2:hover {
+      color: hsl(12, 88%, 59%);
+      background-color: white;
+      border: 1px solid hsl(12, 88%, 59%);
+    }
+
+    #main3 {
+      margin-top: 150px;
+    }
+
+    #col4 {
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img class="img1" src="images/logo.svg" alt="logo"></a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"> Pricing <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#products-menu" onclick="products()">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Community</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Contact US</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="#">Privacy policy</a>
+            <a class="dropdown-item" href="#">About Us</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-outline-dark" type="submit">
+            <i class="bi-cart-fill me-1"></i>
+            Cart
+            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+        </button>
+    </form>
+    </div>
+  </nav>
+  <div class="container" id="main1">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1 class="hea1"> Bring everyone together to build better products.</h1>
+        <p>Manage makes it simple for software teams to plan day-to-day
+          tasks while keeping the larger team goals in view.</p>
+        <button id="btn1">Get Started</button>
+      </div>
+      <div class="col-sm-6">
+        <img src="images/illustration-intro.svg" alt="illustration-intro">
+      </div>
+    </div>
+  </div>
+  <div class="container" id="main2">
+    <div class="row">
+      <div class="col-sm-6 pt-lg-5">
+        <h1 class="hea1">What’s different about Manage?</h1>
+        <p>Manage provides all the functionality your team needs, without
+          the complexity. Our software is tailor-made for modern digital
+          product teams.</p>
+      </div>
+      <div class="col-sm-6">
+        <div class="col align-self-end">
+          <button class="btn2">01</button>
+          <h2>Track company-wide progress</h2>
+          <p>See how your day-to-day tasks fit into the wider vision. Go from
+            tracking progress at the milestone level all the way done to the
+            smallest of details. Never lose sight of the bigger picture again.
+          </p>
+        </div>
+
+        <div class="col align-self-end">
+          <button class="btn2">02</button>
+          <h2>Advanced built-in reports</h2>
+          <p> Set internal delivery estimates and track progress toward company
+            goals. Our customisable dashboard helps you build out the reports
+            you need to keep key stakeholders informed.</p>
+        </div>
+        <div class="col align-self-end">
+          <button class="btn2">03</button>
+          <h2>Everything you need in one place</h2>
+          <p> Stop jumping from one service to another to communicate, store files,
+            track tasks and share documents. Manage offers an all-in-one team
+            productivity solution.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="main3">
+    <h1 style="text-align: center ; margin-bottom: 50px;">What they’ve said</h1>
+    <div class="row" id="products-menu">
+      <div class="col-sm-4">
+        <div class="card h-100">
+          <!-- Sale badge-->
+          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+          <!-- Product image-->
+          <img src="images/360.jpg" alt="Anisha">
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">UBeesize Magnetic Tripod Mount Holder for MagSafe Phone</h5>
+              <p>UBeesize Magnetic Tripod Mount Holder for MagSafe Phone - Universal Magnetic Phone Holder with Selfie
+                Light, 360°</p>
+
+              <!-- Product price-->
+              <span class="text-muted text-decoration-line-through">$50.00</span>
+              $25.00
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card h-100">
+          <!-- Sale badge-->
+          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+          <!-- Product image-->
+          <img src="images/braker.jpg" alt="ali">
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">Circuit Breakers</h5>
+              <p>Blue Sea Systems A-Series Toggle Double Pole Circuit Breakers</p>
+              <!-- Product price-->
+              <span class="text-muted text-decoration-line-through">$30.00</span>
+              $25.00
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-4">
+        <div class="card h-100">
+          <!-- Sale badge-->
+          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+          <!-- Product image-->
+          <img src="images/pin.jpg" alt="Richard">
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">IOGEAR USB 3.0 BoostLinq</h5>
+              <p>IOGEAR USB 3.0 BoostLinq Active 33Ft Extension Cable - Type A (M) to A (F) - Daisy Chain Up To 5 -
+                Transfer Rates Up To</p>
+                <div class="d-flex justify-content-center small text-warning mb-2">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+              </div>
+              <!-- Product price-->
+              <span class="text-muted text-decoration-line-through">$20.00</span>
+              $15.00
+            </div>
+          </div>
+          <!-- Product actions-->
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <button id="btn3">Get Started</button>
+
+ <p> Simplify how your team works today.</p>
+ <button class="btn2"> Get Started</button>
+
+ <p> Copyright 2020. All Rights Reserved</p>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+    <script>
+      function products(){
+        document.getElementById("products-menu");
+      }
+    </script>
+  </div>
+</body>
+
+</html>
